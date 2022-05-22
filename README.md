@@ -1,2 +1,2 @@
-# Algorithms-C-C
-Algorithms / Datt
+# Algorithms-C-CPP
+Algorithms / Data strucures / 
