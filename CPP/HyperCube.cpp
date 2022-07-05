@@ -1,47 +1,27 @@
+
 #include <iostream>
-#include <cstdlib>
 #include <cmath>
-#include <iomanip>
-#include <stdio.h>
-using namespace std;
+
 
 int main()
-{
-  unsigned int num, n, d, a;
-  cin >> num;
-  for (unsigned long i = 0; i < num; i++)
-  {
-    scanf("%u", &n);
-    scanf("%u", &d);
-    unsigned long long x, w = 1, y, z = 1, m = 1;
-    if (d > n / 2)
-    {
-      a = n - d;
+{   
+    
+    int number,n,d, i=0,k=0;
+    int result = 0;
+    int temp = 0;
+    std::cin>>number;
+    for (; i<number; i++) {
+        std::cin>>n>>d;
+        d > n/2 ? k=n-d: k=d;
+    //    std::cout<<pow(2,n-1)<<"\n";
+    //    std::cout<<tgamma(k+1)<<"\n";
+    //    std::cout<<tgamma(n-k+1)<<"\n";
+    //    std::cout<<tgamma(n+1)<<"\n";
+    //    std::cout<<temp<<"\n";
+        result = pow(2,n-1)*(tgamma(n+1)/(tgamma(k+1)*tgamma((n-k)+1)));
+        std::cout<<result<<" "<<"\n";
     }
-    else
-    {
-      a = d;
-    }
-    if (n < d || n == 0 || d == 0)
-    {
-      cout << "0" << endl;
-    }
-    else
-    {
-      for (unsigned int j = a; j > 1; j--)
-        m *= j;
-      for (unsigned int k = 0; k < a; k++)
-      {
-        z = z * (n - k);
-      }
-      y = z / m;
-      for (unsigned int l = 0; l < n - 1; l++)
-      {
-        w = w * 2;
-      }
-      x = w * y;
-      printf("%llu\n", x);
-    }
-  }
-  return 0;
+    
+
+    return 0;
 }
