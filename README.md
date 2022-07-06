@@ -1,2 +1,2 @@
 # Algorithms-C-CPP
-Solved Algorithms / Data strucures / 
+Solved Algorithms / Data strucures  /  
