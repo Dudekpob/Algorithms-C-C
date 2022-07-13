@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <math.h>
+
+#define swap(a,b,c) ( c = a, a = b, b = c)
+
+int main()
+{
+    int a =3, b=6, d = 0;
+       swap(a,b,  d);
+    printf("%d\n%d", a,b);
+}
